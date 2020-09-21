@@ -1,0 +1,7 @@
+<h1> <%= @destination.name%> Information Page </h1>
+
+<h3>Most Recent Posts about <%= @destination.name%> </h3>
+
+<% @destination.posts.updated_at do |post|%>
+<%= post.updated_at %>
+

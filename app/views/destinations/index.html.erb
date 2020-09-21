@@ -1,0 +1,6 @@
+<h1> Destinations </h1>
+
+<% @destinations.each do |d|%>
+<%= d.name%><br>
+<%= link_to 'More Info', destination_path(d.id)%><br>
+<% end %>

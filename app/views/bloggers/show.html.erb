@@ -1,0 +1,21 @@
+<h1> Check me Out! I blog and stuf! 😎✨ </h1>
+<h3> Total Likes </h3>
+
+<% total = 0 %>
+<% @blogger.posts.each do |post|%>
+<% post.likes += total%>
+<% end %>
+<p> <%=@blogger.name%> has <%= p total %> likes</p>
+    
+
+<h3> Most Valuable Post </h3>
+
+<%# <% @blogger.posts.each do |post|%>
+<%# <p><%= @blogger.name has <%= post.likes.%> 
+<%# <%end%> 
+
+<% most_likes = @blogger.posts.each{ |post| post.likes }.map {|post| post.likes}.max%>
+<% topblog = @blogger.posts.each{ |post| post.likes }.max %>
+
+<p><%= @blogger.name%> has <%= most_likes %> on their biggest post! </p>
+    <%= link_to "My top blog", post_path(topblog)%>
